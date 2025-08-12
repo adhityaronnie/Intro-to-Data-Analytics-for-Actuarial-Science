@@ -7,4 +7,4 @@ ASSIGNMENT:
 Background
 You are an actuarial analyst at an insurance company. You have been given a small dataset of policyholders, containing demographic information, sum insured, and claims history. Your task is to perform exploratory data analysis (EDA), visualize the results, and calculate basic actuarial metrics.
 Dataset
-Use the provided dataset from the starter code: https://github.com/adhityaronnie/Intro-to-Data-Analytics-for-Actuarial-Science/
+Use the provided dataset from the starter code: week1.py
