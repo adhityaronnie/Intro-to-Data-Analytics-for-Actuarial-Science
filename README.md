@@ -1,39 +1,54 @@
-Week1: What this code teaches beginners in actuarial data analytics:
-Data loading – using a simple in-memory dataset (can later be replaced by CSV/excel).
-Descriptive statistics – describe(), claim frequency, severity.
-Visualization – histograms, boxplots for exploratory data analysis (EDA).
-Actuarial metric – calculation of Pure Premium as a first step in pricing.
-ASSIGNMENT:
-Background
-You are an actuarial analyst at an insurance company. You have been given a small dataset of policyholders, containing demographic information, sum insured, and claims history. Your task is to perform exploratory data analysis (EDA), visualize the results, and calculate basic actuarial metrics.
-Dataset
-Use the provided dataset from the starter code: https://github.com/adhityaronnie/Intro-to-Data-Analytics-for-Actuarial-Science/blob/main/week1.py
-You may copy it directly from the starter Python code or create your own small dataset with at least 10 policyholders.
+Assignment 1 – Data Cleaning & Preparation
+Dataset: health_insurance_claims.csv (provided in Week 2–3 lab)
+Due Date: [Insert date, e.g., end of Week 4]
+Weight: 7.5% of final grade (part of Assignments total 30%)
+Learning Objectives
+By completing this assignment, students will:
+Identify and handle missing data.
+Detect and treat duplicate records.
+Explore and handle outliers.
+Apply transformations to prepare data for analysis.
+Document and justify their cleaning decisions.
 
 Tasks
-Data Preparation
--Load the dataset into a Pandas DataFrame.
--Check for missing values and handle them appropriately.
--Create an Age_Group variable with categories:
-  Young (≤ 35)
-  Middle-aged (36–50)
-  Senior (> 50)
+Part A: Initial Inspection (10 points)
+Load the dataset and display the first 10 rows.
+Report the number of rows and columns.
+Generate summary statistics for all numeric variables.
+Identify categorical vs. numerical variables.
 
-Descriptive Statistics
--Show summary statistics for Age, Sum_Insured, and Claim_Amount.
--Calculate Claim Frequency (proportion of policies with a claim).
--Calculate Average Claim Severity (average claim amount, conditional on a claim occurring).
-Visualization
--Create a histogram showing the distribution of Age.
--Create a boxplot of Claim_Amount by Age_Group.
--Create a scatter plot of Sum_Insured vs Claim_Amount and comment on any trend.
-Actuarial Metric
--Calculate the Pure Premium:
--Pure Premium = Frequency × Severity
--Pure Premium=Frequency×Severity
--Interpret the result: What does this mean for the insurer?
-Extension Task (Bonus +5%)
-Assume a loading factor of 20% to cover expenses and profit.
--Calculate the Gross Premium:
-Gross Premium=Pure Premium×(1+0.20)
--Interpret how this would be used in pricing.
+Part B: Missing Values (20 points)
+Report the total number of missing values per variable.
+Decide and apply appropriate strategies:
+For age: fill with median.
+For claim_amount: fill with mean or median (justify your choice).
+For diagnosis_code: fill with most frequent category.
+Provide before-and-after comparison of missing values.
+
+Part C: Duplicates & Data Integrity (15 points)
+Check for duplicate claim_id entries.
+Remove duplicates, if any, and report how many rows were removed.
+Verify that all remaining claim IDs are unique.
+
+Part D: Outlier Detection (25 points)
+Create a boxplot of claim_amount.
+Identify potential outliers using the IQR method.
+Decide whether to remove, cap, or transform them (justify your approach).
+Show before-and-after distribution plots.
+
+Part E: Data Transformation (20 points)
+Encode categorical variables (gender, policy_type, payment_status) into numerical form (label encoding or one-hot encoding).
+Normalize or standardize the claim_amount variable.
+Explain why normalization may be useful for downstream modeling.
+
+Part F: Reporting & Documentation (10 points)
+Summarize the cleaning steps performed.
+Justify major decisions (e.g., imputation choice, outlier treatment).
+Save the final cleaned dataset as health_insurance_claims_clean.csv.
+
+Submission Format
+Jupyter Notebook (.ipynb) with:
+Clear code and output cells
+Comments explaining steps
+CSV file of cleaned dataset
+Short report (1–2 pages, PDF) summarizing steps and justifications
