@@ -1,6 +1,6 @@
 Assignment 1 – Data Cleaning & Preparation
 Dataset: health_insurance_claims.csv (provided in Week 2–3 lab)
-Due Date: [Insert date, e.g., end of Week 4]
+Due Date: 1 (one) week after announced.
 Weight: 7.5% of final grade (part of Assignments total 30%)
 Learning Objectives
 By completing this assignment, students will:
